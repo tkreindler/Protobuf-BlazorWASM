@@ -1,0 +1,18 @@
+syntax = "proto3";
+package tutorial;
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "ProtobufBlazor.Shared";
+
+message WeatherForecastSender {
+    google.protobuf.Timestamp Date = 1;
+
+    int32 TemperatureC = 2;
+
+    string Summary = 3;
+}
+
+message WeatherForecastSenderArray {
+    repeated WeatherForecastSender Forecasts = 1;
+}
